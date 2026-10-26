@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta pentru activitatea realizata cu AI -->
+    <color name="ai_primar">#FFE65100</color>
+    <color name="ai_accent">#FFFFB74D</color>
+    <color name="ai_fundal">#FFFFF8F1</color>
+    <color name="ai_card">#FFFFFFFF</color>
+    <color name="ai_contur">#FFFFE0C2</color>
+    <color name="ai_text">#FF3E2723</color>
+    <color name="ai_text_secundar">#FF8D6E63</color>
+</resources>

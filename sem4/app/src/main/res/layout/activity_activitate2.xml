@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adauga mancare"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etDenumire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Denumire" />
+
+    <EditText
+        android:id="@+id/etCalorii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calorii"
+        android:inputType="number" />
+    <CheckBox
+        android:id="@+id/cbVegetarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegetarian" />
+
+    <RadioGroup
+        android:id="@+id/rgTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbFelPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Fel principal" />
+
+        <RadioButton
+            android:id="@+id/rbDesert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desert" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bucatarie" />
+
+    <Spinner
+        android:id="@+id/spBucatarie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/bucatarii" />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <Switch
+        android:id="@+id/swPicant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Picant" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apasa"
+        android:onClick="culegeDateMancare"/>
+
+
+</LinearLayout>
