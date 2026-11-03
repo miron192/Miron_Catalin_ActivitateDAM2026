@@ -48,6 +48,14 @@
         android:layout_height="wrap_content"
         android:text="Adauga Mancarica (design AI)"
         android:onClick="deschideActivitateAI" />
+
+    <Button
+        android:id="@+id/btnVeziLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vezi lista de mancaruri"
+        android:onClick="deschideLista" />
+
     <TextView
         android:id="@+id/tvRezultat"
         android:layout_width="match_parent"

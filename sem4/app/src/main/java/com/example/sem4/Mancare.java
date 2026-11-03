@@ -1,6 +1,8 @@
 package com.example.sem4;
 
-public class Mancare {
+import java.io.Serializable;
+
+public class Mancare implements Serializable {
     public String Denumire;
     public int calorii;
     public boolean vegetarian;

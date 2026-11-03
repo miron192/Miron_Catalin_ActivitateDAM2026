@@ -22,9 +22,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    // primeste rezultatul de la Activitate2 / ActivitateAI
+
+    private List<Mancare> listaMancaruri = new ArrayList<>();
+
+
     private final ActivityResultLauncher<Intent> launcherMancare =
             registerForActivityResult(
                     new ActivityResultContracts.StartActivityForResult(),
@@ -51,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                                     bundle.getFloat("rating"),
                                     bundle.getString("bucatarie"));
 
+                            listaMancaruri.add(mancare);
+
                             TextView tvRezultat = findViewById(R.id.tvRezultat);
                             tvRezultat.setText(mancare.toString());
                             Toast.makeText(this, mancare.toString(), Toast.LENGTH_LONG).show();
@@ -60,6 +68,21 @@ public class MainActivity extends AppCompatActivity {
     public void deschideActivitateAI(View view) {
         Intent intent = new Intent(MainActivity.this, ActivitateAI.class);
         launcherMancare.launch(intent);
+    }
+
+    private final ActivityResultLauncher<Intent> launcherLista =
+            registerForActivityResult(
+                    new ActivityResultContracts.StartActivityForResult(),
+                    result -> {
+                        if (result.getResultCode() == RESULT_OK) {
+                            listaMancaruri = (List<Mancare>) result.getData().getSerializableExtra("lista");
+                        }
+                    });
+
+    public void deschideLista(View view) {
+        Intent intent = new Intent(MainActivity.this, Activitate3.class);
+        intent.putExtra("lista", new ArrayList<>(listaMancaruri));
+        launcherLista.launch(intent);
     }
 
     @Override

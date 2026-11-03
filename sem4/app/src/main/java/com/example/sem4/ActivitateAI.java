@@ -17,7 +17,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-// Aceeasi functionalitate ca Activitate2, dar cu design realizat cu AI
 public class ActivitateAI extends AppCompatActivity {
 
     @Override
