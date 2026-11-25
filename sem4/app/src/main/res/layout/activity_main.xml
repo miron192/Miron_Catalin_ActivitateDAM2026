@@ -20,6 +20,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:text="@string/introduceti_numele"
         android:inputType="text"
         android:id="@+id/nume_ET"
@@ -63,5 +64,12 @@
         android:paddingTop="16dp"
         android:textSize="16sp" />
 
+
+    <Button
+        android:id="@+id/btnVeziImagini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imagini"
+        />
 
 </LinearLayout>

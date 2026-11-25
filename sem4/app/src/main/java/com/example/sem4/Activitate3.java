@@ -13,7 +13,9 @@ import java.util.List;
 
 public class Activitate3 extends AppCompatActivity {
 
-    List<Mancare> lista;
+   private List<Mancare> lista = null;
+    private int idModificat=0;
+    private MancareAdapter adapter=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,14 @@ public class Activitate3 extends AppCompatActivity {
 
         lista = (List<Mancare>) getIntent().getSerializableExtra("lista");
 
-        ArrayAdapter<Mancare> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista);
+//        ArrayAdapter<Mancare> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista);
         ListView lv = findViewById(R.id.lvMancaruri);
-        lv.setAdapter(adapter);
+//        lv.setAdapter(adapter);
 
+        adapter = new MancareAdapter(lista, getApplicationContext(),R.layout.layoutpersonalizatmancare);
+
+
+        lv.setAdapter(adapter);
         lv.setOnItemClickListener((parent, view, position, id) -> {
             Toast.makeText(this, lista.get(position).toString(), Toast.LENGTH_LONG).show();
         });

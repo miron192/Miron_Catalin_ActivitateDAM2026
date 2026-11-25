@@ -91,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Button btnVeziImagini = findViewById(R.id.btnVeziImagini);
+
+        btnVeziImagini.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Imagini.class);
+            startActivity(intent);
+
+        });
+
+
         ViewCompat.setOnApplyWindowInsetsListener(
                 findViewById(R.id.main), (v, insets) -> {
                     Insets systemBars = insets.getInsets(

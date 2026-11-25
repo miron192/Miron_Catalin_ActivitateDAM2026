@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:fitsSystemWindows="true">
+
+    <Spinner
+        android:id="@+id/miron_catalin_memoriiSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/memorii"
+        android:minHeight="32dp" />
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/miron_catalin_modelET"
+    android:inputType="text"
+    android:hint="@string/model"
+    />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/miron_catalin_androidCB"
+        android:text="@string/android"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/miron_catalin_salvareBTN"
+        android:text="@string/salvare"
+        />
+
+</LinearLayout>
